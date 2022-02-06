@@ -1,0 +1,388 @@
+body{
+     background-color:#fc4;
+     
+     width: 100%;
+     overflow-x: hidden;
+}
+#wrapper{
+     width: 100%;
+     height: 100%;
+     background-color: rgb(46, 25, 25);
+     margin: auto;   
+}
+header{
+     width: 100%;
+     background-color: #fc4;
+     height: 80px;
+     display: flex;
+     flex-direction: row;
+     align-items: center;  
+      position: sticky;
+      z-index: 10;
+}
+nav, nav ul{
+     width: 100%;
+     height:30px;
+}
+nav ul{
+     display: flex;
+     flex-direction: row;
+     justify-content: space-evenly;
+     align-items: center;   
+}
+nav ul li {
+ border:2px solid black;
+ width: 84px;
+ padding: 12px 6px ;
+ text-align: center;
+ border-radius: 15px;
+ color: black;
+}
+#user-nameContainer{
+   display: flex;
+   flex-direction: row;
+   gap:6px; 
+   align-items: flex-start;
+   color: black;
+}
+#user-nameContainer p{ 
+     max-width: 74px;
+     overflow: hidden;
+     font-size: 14px; 
+}
+#logoutButton{
+     position: absolute;
+     top: 0px;
+     right: 2%;
+     border: none;
+     background-color:#900c3f;
+     cursor: pointer;
+     color: white;
+}
+/* header for phone */
+@media only screen and (max-width: 768px) {
+     #user-nameContainer p{ 
+          visibility: collapse;
+     }
+}
+nav ul li a{
+     color: rgb(0, 0, 0); 
+    
+}
+.userPhoto{
+     border-radius: 25px;
+}
+
+.section {
+     width: 100%;
+     background-image: url("images/woodBgImg2.jpg");
+     background-size: contain;
+     display: flex;
+     justify-content: center;
+     flex-direction: row;
+     flex-wrap: wrap;   
+     overflow-y:scroll ; 
+     height: 75vh;
+}
+.section-none-searchLine {
+     width: 100%;
+     background-image: url("images/woodBgImg2.jpg");
+     background-size: contain;
+     display: flex;
+     justify-content: center;
+     flex-direction: row;
+     flex-wrap: wrap;   
+     overflow-y:scroll ; 
+     height: 81vh;
+}
+/* phone section fix */
+@media only screen and (max-width: 768px) {
+     .section {
+          width: 100%;
+          height: 500px;
+          background-image: url("images/woodBgImg2.jpg");
+          background-size: contain;
+          display: flex;
+          justify-content: center;
+          flex-direction: row;
+          flex-wrap: wrap;   
+          overflow-y:scroll ; 
+          height: 85vh;
+     }
+     .section-none-searchLine {
+          width: 100%;
+          height: 500px;
+          background-image: url("images/woodBgImg2.jpg");
+          background-size: contain;
+          display: flex;
+          justify-content: center;
+          flex-direction: row;
+          flex-wrap: wrap;   
+          overflow-y:scroll ; 
+          height:90vh ;
+     }
+}
+    
+.recBox {
+     width: 246px;
+     height: 380px;
+     display: flex;
+     flex-direction: column;
+     background-color:black;
+     margin: 15px;  
+     border: 1px solid rgb(240, 236, 236);
+     text-align: center; 
+     margin-bottom: 36px;
+     position: relative;
+     color: white;
+     border-radius: 10px;
+}
+.recBox img:hover{
+     cursor: pointer;
+}
+.recBox img{
+     border-radius: 10 10 0 0;
+     padding-bottom: 6px;
+}
+.recBox h3{
+   text-align: center;
+   font-weight: bold;
+   padding-bottom: 10px;
+ }
+.recBox p{
+     padding-bottom: 10px;
+}
+.bContainer{
+     position: absolute;
+     bottom: 36px;
+     width: 100%; 
+     padding-bottom: 6px;
+}
+.bStyle{
+     margin-left: 12px;    
+     background-color:#fc4;
+     width: fit-content;
+     font-size: 12px;
+     border-radius: 10px;
+     padding: 4px;
+     font-size: 14px;
+     font-weight: bold;
+     border-style: none;
+     text-align: center;
+     
+}
+.bCookStyle{
+     color: black;
+     position: absolute;
+     right: 12px;   
+}
+.bFavStyle{
+     color: black;
+     position: absolute;
+     left: 0px;
+}
+
+.bStyle:hover{
+     background-color:rgb(223, 168, 17);
+}
+
+/* ______________FOOTER_____________ */
+footer {
+     width: 100%;
+     background-color: #fc4;
+     height: 30px;
+     font-size: 22px;
+     text-align: center;
+     position: absolute;
+     bottom: 0px;
+     z-index: 10;
+}
+
+#searchBox{
+     width: 100%;
+     height: 34px;
+     display: flex;
+     flex-direction: row;
+     background-color: black;
+     padding-bottom: 8px; 
+     padding-top: 8px;
+     color: white;
+     padding-left: 74px; 
+     gap: 12px;       
+}
+#searchBox input[type=text],#searchBox select{
+   background-color: white;   
+   border: none;   
+   font-size: 14px;  
+}
+/* !!!! Phone search div fix ________________________________________ */
+@media only screen and (max-width: 768px) {
+     /* For mobile phones: */
+     #searchBox{
+          width: 100%;
+          height: 38px;
+          display: flex;
+          flex-direction: row;
+          background-color: black;           
+          padding-bottom: 8px; 
+          color: white;
+          padding-left: 10px; 
+          padding-right: 10px;
+          text-align: center;
+          font-size: 13px;
+          align-items: center;
+          
+     }
+     #searchBox input[type=text]{
+          margin-left: 0px;
+          margin-right: 0px;
+          min-width: 12%;         
+     }
+     #searchBox select {
+          margin-left: 0px;
+          margin-right: 0px;
+          max-width: 38%; 
+          font-size: 14px;           
+     }
+  
+}
+/* create recepe + accont change styles */
+/* __________________________________________________________________________ */
+.newRdivContainer{
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     background-color: rgb(2, 2, 2);
+     width: 200px;
+     height: 280px;
+     margin-right: auto;
+     margin-left: auto;
+     text-align: center;
+     margin-top: 50px;   
+}
+.newRdivContainer form h3{
+     padding-bottom: 15px;
+}
+.newRdivContainer form [type="text"],
+.newRdivContainer form button{
+     padding-bottom: 10px; 
+     margin-bottom: 12px;
+     text-align: center;
+}
+.newRdivContainer form [type="text-area"]{
+     padding-bottom: 32px;
+     margin-bottom: 10px;
+     text-align: center;
+}
+
+.newRdivContainer form button{  
+    background-color:#fc4;
+    font-size: 14px;
+    border-radius: 10px;
+    text-align: center;
+    color:black;
+}
+/* cooked list table__________________________ */
+.cookedDivContainer{    
+     margin-left: auto;
+     margin-right: auto; 
+     margin-top: 0px;
+     width: 100%;
+     height: fit-content;
+     text-align: center;  
+     margin-bottom: 60px;    
+     margin-top: 60px;
+     color: white;
+     font-size: 18px;
+}
+.cookedDivContainer table{
+     margin-top: 16px;
+     margin-left: auto;
+     margin-right: auto;
+     
+}
+table, th, td {  
+     padding: 16px;
+     text-align: center;
+     border:1.5px solid rgb(255, 255, 255);
+     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+     font-style: italic;
+     border-color: #fc4;
+   }
+   
+   /* new rec form styles /___________________________________*/
+.newRdivContainer{
+     width: 320px;
+     text-align: center;
+    
+}
+.newRForm input{
+     text-align: center;
+     width: 90%;
+     margin-left: auto;
+     margin-right: auto;
+}
+.newRForm{
+     color: white;
+     width: 300px;
+     margin: auto;
+}
+
+/* profile change form and div style __________________________________________  */
+.profForm{
+     color: white;
+     width: 90%;
+     margin: auto;
+}
+.profForm input{
+     width: 90%;
+
+}
+/* login-title -< login page _____________________*/
+.sectionLog-Reg{
+     width: 100%;
+     background-size: contain;
+     display: flex;
+     justify-content: center;
+     flex-direction: row;
+     flex-wrap: wrap;   
+     overflow-y:scroll ; 
+     height: 75vh;
+     background-image: url("images/login-bg-img1.jpg");
+     background-size: cover;
+     background-repeat: no-repeat;
+     color: white;
+}
+
+#welcome{
+     background-color: black;
+     text-align: center;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     flex-direction: column;
+     height: 100px;
+     color: white;
+
+     width: 100%;
+}
+#welcome h1{
+     margin-bottom: 12px; 
+}
+#qBox{
+     display: flex;
+     flex-direction: column;
+     text-align: end;
+     color: #fc4;
+}
+ /*DIV - info for the project  */
+#info{
+     color: white;
+     display: flex;
+     flex-direction: column;
+     text-align: center;
+     background-color: black;
+     height: 120px;
+
+}
+

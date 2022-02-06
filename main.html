@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Recipe site</title>
+     <link rel="stylesheet" href="view/reset.css">
+     <link rel="stylesheet" href="view/myStyle.css">
+     <link rel="stylesheet" href="view/log-reg_page.css">
+     <link rel="stylesheet" href="view/Error_page_style.css">
+</head>
+
+<body>
+     <div id="wrapper">
+          <header>
+               <nav>
+                    <ul>
+                         <img src="view/images/logo.png" alt="logo" width="65px">
+                         <li><a href="#homePage">&nbsp All &nbsp recipes</a></li>
+                         <li><a href="#fav">Favourite recipes</a> </li>
+                         <li><a href="#newR">Create recipe</a> </li>
+                         <li><a href="#myProfile">&nbsp My &nbsp profile</a> </li>   
+                         <div id="user-nameContainer">
+                              <img src="view/images/guest.png" alt="profilePic" width="45px" class="userPhoto">
+                              <p id="username">Hello,<br>username</p>
+                         </div>
+                         <button id="logoutButton">logout</button>
+                         
+                         <!-- "view/images/guest.png" -->
+                    </ul>
+
+               </nav>
+          </header>
+          <!-- search -->
+          <div>
+               <div id="searchBox">
+                    <label for="search" > Search:</label>
+                    <input type="text" id="search">
+                    <label for="search" >Filter by ingredients:</label>
+                    <select name="ing" id="ing" style="width:140px" value=" "></select>
+               </div>
+
+          </div>
+          <!-- login-registration page -->
+          <div>
+               <div class="sectionLog-Reg" id="loginPage">
+                    <div id="welcome">
+                         <h1 id="welcomeText">Welcome to CookingUneverse.com</h1>
+                         <div id="qBox">
+                              <q>"You don't need a silver fork to eat good food." </q>
+                              <q>  - Paul Prudhomme.</q>
+                         </div>    
+                    </div>
+                    <div id="login_div">
+                         <form action="#">
+                              <h3>Login:</h3>
+                              <p id="errorMsg">Wrong username or password.</p>
+                              <input id="login_name" type="text" placeholder="username:">
+                              <input id="login_pass" type="text" placeholder="password:">
+                              <input id="login_b_login" type="submit" value="login" class="log-regButtons">
+                              <input id="go_to_register" type="button" value="create account" class="log-regButtons">
+                         </form>
+                    </div>
+                    <div id="register_div">
+                         <form action="#">
+                              <h3>Create your account:</h3>
+                              <p id="regMsg">All fields are required(3-18 chars).</p>
+                              <input id="regName" type="text" placeholder="username:">
+                              <input id="regpass1" type="text" placeholder="password:">
+                              <input id="regpass2" type="text" placeholder="confirm password:">
+                              <input id="register_button" type="submit" value="create"class="log-regButtons">
+                              <input id="go_to_login" type="button" value="go to login" class="log-regButtons">
+                         </form>
+                    </div>
+               </div>
+          </div>
+          <!-- site info on log -->
+          <div id="info">
+               <p>Cooking site project.</p>
+               <p>* * * * * * * * * * * * * * * * * * * * *</p>
+               <p>This project is using localStorage and sessionStorage window properties instead of server interaction.</p>
+               <p>Try it!</p>
+               <p>* * * * * * * * * * * * * * * * * * * * *</p>
+          </div>
+
+          <div class="section" id="homePage">
+          </div>
+          <div class="section-none-searchLine" id="fav">
+
+          </div>
+          <div class="section-none-searchLine" id="newR">
+
+          </div>
+          <div class="section-none-searchLine" id="myProfile">
+
+          </div>
+          <div class="section-none-searchLine" id="error">
+               <div>
+                    <H1>ERROR PAGE</H1>
+                    <h3>Sorry!</h3>
+                    <img src="view/images/errorImg.jpg" alt="error_image">
+                    <div>
+                         <p>
+                              We can't seem to find the resource you're looking for.
+                              Please check that the Web site address is spelled correctly.
+                              Or go to our home page, and use the menus to navigate to a specific section.
+                         </p>
+                    </div>
+                   
+               </div>
+          </div>
+
+          <footer>
+               <h6>Website created by Nikola Balkov</h6>
+               <h6 id="test123"> All rights reserved &copy; </h6>
+          </footer>
+
+     </div>
+
+
+     <!-- model (data) -> add / remove / insert new data -->
+     <script src="model/dataArray.js"></script>
+     <script src="model/classUser.js"></script>
+     <script src="model/UserStorage.js"></script>
+     <script src="model/classRec.js"></script>
+     <script src="model/managerRec.js"></script>
+
+     <!-- controller (logic - functions) -->
+     <!-- global function for diff actions //split index for readability -->
+     <script src="controller/navColorMarker.js"></script>
+     <script src="controller/createNewRec_F.js"></script>
+     <script src="controller/printCookedList_F.js"></script>
+     <script src="controller/changeUserInfo_F.js"></script>
+     <script src="controller/userLogOut.js"></script>
+     <!--  -->
+     <script src="controller/log-reg_userController.js"></script>
+     <script src="controller/getUser.js"></script>
+     <script src="controller/search_filters.js"></script>
+     <script src="controller/index.js"></script>
+</body>
+
+</html>
